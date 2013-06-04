@@ -5,21 +5,18 @@ class Rhubot
     post_back ARGV[0]
     hubot_room ARGV[1]
   end
-  script = ARGV[2] + ".rb"
+  script_name = ARGV[2]
   args = ARGV[3]
-
-
-  Hubot.status("Running #{script}...")
-
   script_dir = Options.script_path
-  if script.include?("/")
-    script_dir +="/#{File.dirname(script)}"
-    script = File.basename(script)
+  script_path = "#{script_dir}/#{script_name}.rb"
+
+  script_path = "#{script_dir}/#{script_name}/#{script_name}.rb" unless File.exists?(script_path)
+
+  if File.exists?(script_path)
+    Hubot.status("Running #{script_name}...")
+    result = `ruby #{script_path} #{args}`
+    Hubot.status(result)
+  else
+    Hubot.status("#{script_name} not found.")
   end
-
-  cmd = "cd #{script_dir} && ruby #{script} #{args}" #.gsub /(?<!\n)\n(?!\n)/, ''
-  result = `ruby #{script_dir}/#{script} #{args}`
-
-  Hubot.status(result)
-  
 end
