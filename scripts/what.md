@@ -20,20 +20,8 @@ scripts/
 
 ###Running non-nested scripts
 
-```
-ruby rhubot.rb etc
-```
-
-###Will Execute
-
-```scripts/etc.rb```
+```ruby rhubot.rb etc #=> scripts/etc.rb```
 
 ###Running nested scripts
 
-```
-ruby rhubot.rb nuke
-```
-
-###Will Execute
-
-```scripts/nuke/nuke.rb```
+```ruby rhubot.rb nuke #=> scripts/nuke/nuke.rb```
