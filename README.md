@@ -1,6 +1,12 @@
 #Rhubot
 
-Make Hubot play nice with Ruby.
+Make Hubot play nice with Ruby. 
+
+rhubot allows you to call arbitrary, long-running ruby scripts from [campfire](http://campfirenow.com/) via [hubot](http://hubot.github.com/). Once the script is finished executing it will post its result back into the campfire room where it was called.
+
+##Why?
+
+I dig coffeescript but I dig ruby more.
 
 #Setup
 
