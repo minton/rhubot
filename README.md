@@ -12,7 +12,7 @@ I dig coffeescript but I dig ruby more.
 
 ##Campfire Setup 
 
-Ensure you have the [rhubot campfire script](http://comingsoon#) and that the following configuration options are defined for hubot.
+Ensure you have the [rhubot campfire script](https://raw.github.com/minton/rhubot/master/coffee/rhubot.coffee) and that the following configuration options are defined for hubot.
 
 ####RHUBOT_PATH
 
